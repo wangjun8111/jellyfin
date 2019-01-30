@@ -22,5 +22,5 @@ RUN apt-get update \
 COPY --from=ffmpeg / /
 COPY --from=builder /jellyfin /jellyfin
 EXPOSE 8096
-VOLUME /config /media
+VOLUME /config /media/sitcom
 ENTRYPOINT dotnet /jellyfin/jellyfin.dll -programdata /config
